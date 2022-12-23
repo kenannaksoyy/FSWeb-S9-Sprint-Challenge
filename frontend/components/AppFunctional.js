@@ -124,10 +124,10 @@ export default function AppFunctional(props) {
         <h3 id="message">{oyuncu["initialMessage"]}</h3>
       </div>
       <div id="keypad">
-        <button id="left" onClick={()=>{sonrakiIndex("Sol")}}>SOL</button>
-        <button id="up" onClick={()=>{sonrakiIndex("Yukari")}}>YUKARI</button>
-        <button id="right" onClick={()=>{sonrakiIndex("Sag")}}>SAĞ</button>
-        <button id="down" onClick={()=>{sonrakiIndex("Asagi")}}>AŞAĞI</button>
+        <button id="left" onClick={()=>{sonrakiIndex("Sol")}} data-testid="sol-button">SOL</button>
+        <button id="up" onClick={()=>{sonrakiIndex("Yukari")}} data-testid="yukari-button">YUKARI</button>
+        <button id="right" onClick={()=>{sonrakiIndex("Sag")}} data-testid="sag-button">SAĞ</button>
+        <button id="down" onClick={()=>{sonrakiIndex("Asagi")}} data-testid="asagi-button">AŞAĞI</button>
         <button id="reset" onClick={()=>{reset()}}>reset</button>
       </div>
       <form onSubmit={handleSubmit}>
