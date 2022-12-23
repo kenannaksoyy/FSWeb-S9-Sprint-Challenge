@@ -101,7 +101,7 @@ export default function AppFunctional(props) {
         reset();
     })
     .catch(err => {
-        console.error('Sunucu Hatasi', err);
+        console.error('Sunucu İsleyemedi', err);
     });
 };
 
