@@ -52,3 +52,10 @@ test('Step ve Kordinat Kontrol', async () => {
   expect(screen.getByText("Kordinatlar (3,3)")).toBeInTheDocument();
 });
 
+test('Mail input kontrol', async () => {
+  render(<AppFunctional/>);
+  const mail = screen.getByTestId("mail-input");
+  fireEvent.change(mail,{target:{value:"kenan@hotmail.com"}});
+  expect(mail.value).toBe("kenan@hotmail.com");
+});
+

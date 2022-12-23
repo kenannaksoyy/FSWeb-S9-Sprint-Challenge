@@ -131,7 +131,7 @@ export default function AppFunctional(props) {
         <button id="reset" onClick={()=>{reset()}} data-testid="reset-button">reset</button>
       </div>
       <form onSubmit={handleSubmit}>
-        <input id="email" type="email" placeholder="email girin" onChange={onChange}></input>
+        <input id="email" type="email" placeholder="email girin" onChange={onChange} data-testid="mail-input"></input>
         <input id="submit" type="submit"></input>
       </form>
     </div>
