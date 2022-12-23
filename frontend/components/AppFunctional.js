@@ -67,7 +67,7 @@ export default function AppFunctional(props) {
     else{
       setOyuncu({
         ...oyuncu,
-        ["initialMessage"]:"Alan Disina Cikamazsin"
+        ["initialMessage"]:`${yon} yone dogru gidemezsin`
       });
     }
   }
