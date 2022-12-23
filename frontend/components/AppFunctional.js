@@ -128,7 +128,7 @@ export default function AppFunctional(props) {
         <button id="up" onClick={()=>{sonrakiIndex("Yukari")}} data-testid="yukari-button">YUKARI</button>
         <button id="right" onClick={()=>{sonrakiIndex("Sag")}} data-testid="sag-button">SAĞ</button>
         <button id="down" onClick={()=>{sonrakiIndex("Asagi")}} data-testid="asagi-button">AŞAĞI</button>
-        <button id="reset" onClick={()=>{reset()}}>reset</button>
+        <button id="reset" onClick={()=>{reset()}} data-testid="reset-button">reset</button>
       </div>
       <form onSubmit={handleSubmit}>
         <input id="email" type="email" placeholder="email girin" onChange={onChange}></input>

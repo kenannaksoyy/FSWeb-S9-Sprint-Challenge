@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-
 import AppFunctional from './AppFunctional';
 
 
@@ -33,6 +32,16 @@ test('Asagi Kontrol', async () => {
   expect(screen.getByText("Asagi yone dogru gidemezsin")).toBeInTheDocument();
 });
 
+test('reset Kontrol', async () => {
+  render(<AppFunctional/>);
+  let komutlar=["yukari","asagi","asagi","sol","sag","sag","reset"];
+  komutlar.forEach(komut => {
+    fireEvent.click(screen.getByTestId(`${komut}-button`));
+  });
+  expect(screen.getByText("Kordinatlar (2,2)")).toBeInTheDocument();
+  expect(screen.getByText("0 kere ilerlediniz")).toBeInTheDocument();
+});
+
 test('Step ve Kordinat Kontrol', async () => {
   render(<AppFunctional/>);
   let komutlar=["yukari","asagi","asagi","sol","sag","sag"];
@@ -42,3 +51,4 @@ test('Step ve Kordinat Kontrol', async () => {
   expect(screen.getByText("6 kere ilerlediniz")).toBeInTheDocument();
   expect(screen.getByText("Kordinatlar (3,3)")).toBeInTheDocument();
 });
+
